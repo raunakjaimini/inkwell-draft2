@@ -1,13 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- Updated Font Awesome for icons -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
 <footer th:fragment="footer">
     <div class="footer">
-        <p>2024 © Raunak</p>
+        <div class="left-section">
+            <p>Contact Us: <a href="">info@freshtales.com</a> | <a href="">+1 234 567 890</a></p>
+            <div class="social-icons">
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="center-section">
+            <p>2024 © Raunak</p>
+        </div>
+        <div class="right-section">
+            <p>
+                <a href="#">About Us</a> |
+                <a href="#">Blog</a> |
+                <a href="#">FAQ</a> |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a>
+            </p>
+        </div>
     </div>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'));
+    </script>
 </footer>
 </body>
 </html>
+

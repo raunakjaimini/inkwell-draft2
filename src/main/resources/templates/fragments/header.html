@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
@@ -8,9 +10,10 @@
 <body>
 <header th:fragment="header" class="header-main">
     <div class="header">
-    <h2>Blogsite - Valuebound
-    </h2>
-</div>
+        <h2>
+            InkWell - Share your stories with heart...
+        </h2>
+    </div>
     <div class="topnav">
         <a class="active" th:href="@{/}">Home</a>
         <span sec:authorize="hasRole('ROLE_USER')">

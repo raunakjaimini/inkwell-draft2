@@ -50,22 +50,73 @@
 
 <!--</body>-->
 <!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en"-->
+<!--      xmlns:th="http://www.thymeleaf.org"-->
+<!--      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">-->
+<!--<head th:replace="/fragments/head :: head">-->
+<!--    &lt;!&ndash; CKEditor CDN &ndash;&gt;-->
+<!--    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div th:replace="/fragments/header :: header"></div>-->
+<!--<div class="content-wrapper">-->
+
+<!--    <div class="post-container" id="editor">-->
+<!--        <form class="post-form" action="#"-->
+<!--              th:action="@{'/createNewPost'}"-->
+<!--              th:object="${post}"-->
+<!--              method="post" enctype="multipart/form-data">-->
+<!--            <h2>Create New Blog Post</h2>-->
+<!--            <div class="form-group">-->
+<!--                <label for="title">Title</label>-->
+<!--                <div class="alert-message" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title Error</div>-->
+<!--                <input type="text" id="title" th:field="*{title}" placeholder="Enter post title"/>-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="body">Content</label>-->
+<!--                <div class="alert-message" th:if="${#fields.hasErrors('body')}" th:errors="*{body}">Body Error</div>-->
+<!--                <textarea id="body" th:field="*{body}" placeholder="Write something valuable"></textarea>-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="image">Upload Image</label>-->
+<!--                <input type="file" name="image" id="image"/>-->
+<!--            </div>-->
+<!--            <div class="form-actions">-->
+<!--                <button class="btn btn-submit" type="submit">Publish Post</button>-->
+<!--                <div th:if="${post.id}">-->
+<!--                    <a th:href="@{'/deletePost/{id}'(id=${post.id})}">-->
+<!--                        <button class="btn btn-delete" type="button">Delete Post</button>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Initialize CKEditor &ndash;&gt;-->
+<!--<script>-->
+<!--    CKEDITOR.replace('body');-->
+<!--</script>-->
+
+<!--<footer th:replace="/fragments/footer :: footer"></footer>-->
+
+<!--</body>-->
+<!--</html>-->
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head th:replace="/fragments/head :: head">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/head :: head">
     <!-- CKEditor CDN -->
-    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 </head>
 <body>
 
-<div th:replace="/fragments/header :: header"></div>
+<div th:replace="fragments/header :: header"></div>
 <div class="content-wrapper">
 
     <div class="post-container">
-        <form class="post-form" action="#"
-              th:action="@{'/createNewPost'}"
+        <form class="post-form"
+              th:action="@{/createNewPost}"
               th:object="${post}"
               method="post" enctype="multipart/form-data">
             <h2>Create New Blog Post</h2>
@@ -75,9 +126,12 @@
                 <input type="text" id="title" th:field="*{title}" placeholder="Enter post title"/>
             </div>
             <div class="form-group">
-                <label for="body">Content</label>
-                <div class="alert-message" th:if="${#fields.hasErrors('body')}" th:errors="*{body}">Body Error</div>
-                <textarea id="body" th:field="*{body}" placeholder="Write something valuable"></textarea>
+                <label for="editor">Content</label>
+                <textarea id="editor" th:field="*{body}" name="body"/>
+                <p th:if="${#fields.hasErrors('body')}" th:errors="*{body}" class="alert alert-danger" role="alert">Body Error</p>
+
+                <!--                <div class="alert-message" th:if="${#fields.hasErrors('body')}" th:errors="*{body}">Body Error</div>-->
+<!--                <textarea id="body" th:field="*{body}" placeholder="Write something valuable"></textarea>-->
             </div>
             <div class="form-group">
                 <label for="image">Upload Image</label>
@@ -86,7 +140,7 @@
             <div class="form-actions">
                 <button class="btn btn-submit" type="submit">Publish Post</button>
                 <div th:if="${post.id}">
-                    <a th:href="@{'/deletePost/{id}'(id=${post.id})}">
+                    <a th:href="@{/deletePost/{id}(id=${post.id})}">
                         <button class="btn btn-delete" type="button">Delete Post</button>
                     </a>
                 </div>
@@ -97,10 +151,13 @@
 
 <!-- Initialize CKEditor -->
 <script>
-    CKEDITOR.replace('body');
+    // Make sure the DOM is fully loaded before initializing CKEditor
+    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
+
+ClassicEditor.create(document.querySelector('#body'))
 </script>
 
-<footer th:replace="/fragments/footer :: footer"></footer>
+<footer th:replace="fragments/footer :: footer"></footer>
 
 </body>
 </html>

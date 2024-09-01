@@ -1,6 +1,6 @@
 -- Users
 insert into USERS (ID, EMAIL, PASSWORD, USERNAME, ENABLED)
-VALUES (0, 'raunak@gmail.com', '12345678', 'raunak', true);
+VALUES (0, 'raunak@gmail.com', 'admin@123', 'raunak', true);
 
 insert into USERS (ID, EMAIL, PASSWORD, USERNAME, ENABLED)
 VALUES (1, 'admin@example.com', '$2a$06$OAPObzhRdRXBCbk7Hj/ot.jY3zPwR8n7/mfLtKIgTzdJa4.6TwsIm', 'admin', true);
@@ -29,17 +29,17 @@ insert into USERS_AUTHORITIES (USER_ID, AUTHORITY_ID)
 VALUES (2, 2);
 
 -- Posts
-insert into POSTS (ID, BODY, CREATION_DATE, TITLE, USER_ID)
-VALUES (1, 'In the fast-evolving world of educational technology, it is essential to stay ahead of the curve to unlock new revenue opportunities and maintain a competitive edge. In this detailed case study, we explore how Valuebound assisted a leading provider of educational products and services in achieving this objective. The client faced a significant challenge: how to offer their applications as free downloads on popular app stores while ensuring that access remained restricted to registered users who had purchased the relevant course content.
-
-To address this challenge, Valuebound developed a unique solution that combined innovative authentication mechanisms with an efficient admin portal. This approach allowed the client to meet their goal without incurring the high costs associated with app store commissions. By implementing these strategies, the client was able to offer their educational applications for free while maintaining control over who could access the content.
-
-The technology stack used in this project included a range of cutting-edge tools and platforms. Valuebound utilized React for the front-end development, Node and Express for the back-end, and MariaDB for the database. The applications were deployed on AWS EC2 t2.micro instances, ensuring scalability and reliability. Additionally, the development included Native Android and iOS applications, further broadening the reach of the client''s offerings.
-
-A key component of this solution was the implementation of device-based security. By storing each device''s unique identifier in the database and cross-referencing login requests, Valuebound was able to ensure that only authorized users could access the content. This added an extra layer of security, making it difficult for unauthorized users to gain access, even if they had managed to download the application.
-
-In summary, Valuebound''s innovative approach not only enabled the client to offer their applications as free downloads but also ensured that only paying users could access the content. This case study highlights the importance of leveraging technology to create new revenue opportunities and maintain a competitive advantage in the educational sector.',
-'2020-01-10', 'Innovative Authentication Solutions in EdTech', 2);
+-- insert into POSTS (ID, BODY, CREATION_DATE, TITLE, USER_ID)
+-- VALUES (1, 'In the fast-evolving world of educational technology, it is essential to stay ahead of the curve to unlock new revenue opportunities and maintain a competitive edge. In this detailed case study, we explore how Valuebound assisted a leading provider of educational products and services in achieving this objective. The client faced a significant challenge: how to offer their applications as free downloads on popular app stores while ensuring that access remained restricted to registered users who had purchased the relevant course content.
+--
+-- To address this challenge, Valuebound developed a unique solution that combined innovative authentication mechanisms with an efficient admin portal. This approach allowed the client to meet their goal without incurring the high costs associated with app store commissions. By implementing these strategies, the client was able to offer their educational applications for free while maintaining control over who could access the content.
+--
+-- The technology stack used in this project included a range of cutting-edge tools and platforms. Valuebound utilized React for the front-end development, Node and Express for the back-end, and MariaDB for the database. The applications were deployed on AWS EC2 t2.micro instances, ensuring scalability and reliability. Additionally, the development included Native Android and iOS applications, further broadening the reach of the client''s offerings.
+--
+-- A key component of this solution was the implementation of device-based security. By storing each device''s unique identifier in the database and cross-referencing login requests, Valuebound was able to ensure that only authorized users could access the content. This added an extra layer of security, making it difficult for unauthorized users to gain access, even if they had managed to download the application.
+--
+-- In summary, Valuebound''s innovative approach not only enabled the client to offer their applications as free downloads but also ensured that only paying users could access the content. This case study highlights the importance of leveraging technology to create new revenue opportunities and maintain a competitive advantage in the educational sector.',
+-- '2020-01-10', 'Innovative Authentication Solutions in EdTech', 2);
 
 -- insert into POSTS (ID, BODY, CREATION_DATE, TITLE, USER_ID)
 -- VALUES (2, 'LORD Corporation, a global leader in adhesives, coatings, motion control devices, and sensing technologies, approached us with a critical issue. Their Drupal-based website was underperforming, especially on mobile devices, which was negatively impacting user experience and engagement. Our team was tasked with identifying the root causes of these performance issues and implementing strategic optimizations to enhance the website''s performance.
