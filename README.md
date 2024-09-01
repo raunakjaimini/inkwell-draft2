@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Blogging platform (made with Spring Boot)
 #### Simple blogging platform project I made as started to learn Spring framework.
 ## Live Demo (runs on FreeBSD 12)
@@ -50,3 +51,6 @@ $ mvn clean spring-boot:run
 By default, application uses Tomcat which listening on port: 8080,
 means you can reach it if run on a local machine by hitting URL http://localhost:8080.
 
+=======
+# Inkwell-draft1
+>>>>>>> 6b4a3dd94e4e0c25395a869f2d6f67b1e9e0b617
