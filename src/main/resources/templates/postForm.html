@@ -130,8 +130,6 @@
                 <textarea id="editor" th:field="*{body}" name="body"/>
                 <p th:if="${#fields.hasErrors('body')}" th:errors="*{body}" class="alert alert-danger" role="alert">Body Error</p>
 
-                <!--                <div class="alert-message" th:if="${#fields.hasErrors('body')}" th:errors="*{body}">Body Error</div>-->
-<!--                <textarea id="body" th:field="*{body}" placeholder="Write something valuable"></textarea>-->
             </div>
             <div class="form-group">
                 <label for="image">Upload Image</label>
@@ -154,7 +152,7 @@
     // Make sure the DOM is fully loaded before initializing CKEditor
     <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
 
-ClassicEditor.create(document.querySelector('#body'))
+
 </script>
 
 <footer th:replace="fragments/footer :: footer"></footer>

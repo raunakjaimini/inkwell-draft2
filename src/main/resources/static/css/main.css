@@ -2,14 +2,14 @@
 
 .content-wrapper {
     background-color: #f2f2f2;
-    background-image: url("https://t3.ftcdn.net/jpg/03/54/43/80/240_F_354438078_PEfNvHUfDa3dEojnAXRgZTKa5xBYYVjo.jpg");
+    background-image: url("https://images.pexels.com/photos/7130498/pexels-photo-7130498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 70vh;
-    max-width: 1600px;
-    padding: 50px;
-    margin: 20px auto;
+    height: 120vh;
+    max-width: 100%;
+    /*padding: 50px;*/
+    /*margin: 20px auto;*/
     display: flex;
     flex-direction: column; /* Change to column layout */
     align-items: center; /* Center content horizontally */
@@ -225,15 +225,15 @@ body, h2, a {
 /* Container for centering the login form */
 .login-content-wrapper {
     background-color: #f2f2f2;
-    background-image : url("https://t3.ftcdn.net/jpg/03/54/43/80/240_F_354438078_PEfNvHUfDa3dEojnAXRgZTKa5xBYYVjo.jpg");
+    background-image : url("https://images.pexels.com/photos/7130498/pexels-photo-7130498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     /*background-image: url("https://img.freepik.com/premium-photo/bountiful-spring-fruits-flowers-wooden-table-background_956920-16908.jpg");*/
     background-repeat:no-repeat;
     background-size:cover;
     width: 100%;
-    height: 70vh;
-    max-width: 1600px;
-    padding: 50px;
-    margin: 20px auto;
+    height: 90vh;
+    max-width: 100%;
+    /*padding: 50px;*/
+    /*margin: 20px auto;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -255,6 +255,7 @@ body, h2, a {
     display: flex;
     flex-direction: column; /* Arrange children in a column */
     width: 100%;
+    margin-top: 100px;
     max-width: 400px; /* Compact form width */
     /*background-color: #333;*/
     background-color:rgb(246, 245, 242, 0.2);
@@ -284,7 +285,7 @@ body, h2, a {
     width: 100%;
     padding: 12px;
     border: 1px solid #555; /* Slight border for input fields */
-    background-color: #444;
+    background-color: rgb(246, 245, 242, 0.2);
     color: #fff;
     border-radius: 5px;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
@@ -303,7 +304,7 @@ body, h2, a {
     width: 88%;
     padding: 12px;
     border: none;
-    background-color: #555;
+    background-color: rgb(246, 245, 242, 0.2);
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -390,14 +391,14 @@ body, h2, a {
 /* Unique styles for the register page */
 .register-content-wrapper {
     background-color: #f2f2f2;
-    background-image : url("https://t3.ftcdn.net/jpg/03/54/43/80/240_F_354438078_PEfNvHUfDa3dEojnAXRgZTKa5xBYYVjo.jpg");
+    background-image : url("https://images.pexels.com/photos/7130498/pexels-photo-7130498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat:no-repeat;
     background-size:cover;
     width: 100%;
-    height: 70vh;
-    max-width: 1600px;
-    padding: 45px;
-    margin: 20px auto;
+    height: 100vh;
+    /*max-width: 1600px;*/
+    /*padding: 45px;*/
+    /*margin: 20px auto;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -448,7 +449,7 @@ body, h2, a {
     width: calc(100% - 30px);
     padding: 15px;
     border: none;
-    background-color: #444;
+    background-color: rgb(246, 245, 242, 0.2);
     color: #fff;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -465,7 +466,7 @@ body, h2, a {
     width:calc(100% - 30px);
     padding: 15px;
     border: none;
-    background-color: #555;
+    background-color: rgb(246, 245, 242, 0.2);
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -924,13 +925,14 @@ a:hover {
 /* Post page design with shades of grey */
 .post-content-wrapper {
     background-color: #f2f2f2;
-    background-image: url("https://t3.ftcdn.net/jpg/03/54/43/80/240_F_354438078_PEfNvHUfDa3dEojnAXRgZTKa5xBYYVjo.jpg");
+    background-image: url("https://images.pexels.com/photos/7130498/pexels-photo-7130498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    max-width: 1600px;
-    padding: 50px;
-    margin: 20px auto;
+    max-width: 100%;
+    height: 100vh;
+    /*padding: 50px;*/
+    /*margin: 20px auto;*/
     display: flex;
     flex-direction: column; /* Change to column layout */
     align-items: center; /* Center content horizontally */
@@ -942,7 +944,7 @@ a:hover {
     color: #333; /* Darker grey */
     padding: 10px 20px;
     border-radius: 5px;
-    width: 100%;
+    width: 98%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -956,6 +958,7 @@ a:hover {
     width: 60%; /* Increase width to make it larger */
     min-width: 300px;
     margin-bottom: 20px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1607,7 +1610,7 @@ textarea {
 /*}*/
 /* Ensure the hero section with background image */
 .background-image {
-    background-image: url('https://st2.depositphotos.com/1021722/9898/i/600/depositphotos_98980884-stock-photo-art-spring-blooming-spring-flowers.jpg');
+    background-image: url('https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg');
 
 
     background-size: cover; /* Ensure the image covers the entire container */

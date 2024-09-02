@@ -17,7 +17,7 @@
           th:object="${blogUser}"
           method="post">
         <div>
-            <h1 class="unique-form-title"><b>Sign Up ✍️</b></h1> <!-- Pencil emoji -->
+            <h1 class="unique-form-title"><b>Sign Up </b></h1> <!-- Pencil emoji -->
             <label class="unique-form-label">
                 <div class="unique-error-message" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">⚠️ Username Error
                 </div>
@@ -44,7 +44,7 @@
             </label>
         </div>
         <div class="register-button-wrapper">
-            <button class="unique-submit-btn" type="submit">Register ✅</button> <!-- Checkmark emoji -->
+            <button class="unique-submit-btn" type="submit">Register </button> <!-- Checkmark emoji -->
         </div>
     </form>
 </div>

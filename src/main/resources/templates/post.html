@@ -152,6 +152,55 @@
 <!--</body>-->
 <!--</html>-->
 
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">-->
+<!--<head th:replace="fragments/head :: head">-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div th:replace="fragments/header :: header"></div>-->
+
+<!--<div class="post-content-wrapper">-->
+
+<!--    &lt;!&ndash; Display Success Message &ndash;&gt;-->
+<!--    <div class="alert-success" th:if="${successMessage}" th:text="${successMessage}"></div>-->
+
+<!--    <div class="post-card">-->
+<!--        <img class="post-image" th:src="${post.imageUrl}" alt="Post Image"/>-->
+<!--        <div class="post-content">-->
+<!--            <h2 class="post-title" th:text="${post.title}">Title</h2>-->
+<!--            <p class="post-body" th:text="${post.body}">body text</p>-->
+<!--            <div class="edit-button" sec:authorize="isAuthenticated()" th:if="${isOwner}">-->
+<!--                <a th:href="@{'/editPost/{id}'(id=${post.id})}">-->
+<!--                    <button class="edit-btn" type="button">Edit</button>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="comments-section">-->
+<!--        <h2 class="comment-header">Comments</h2>-->
+<!--        <div th:if="${#lists.isEmpty(post.comments)}">-->
+<!--            <p>No comments yet. Be the first to comment!</p>-->
+<!--        </div>-->
+<!--        <div class="comment" th:each="comment : ${post.comments}">-->
+<!--            <h5 class="comment-info" th:text="'Commented on ' + ${#dates.format(post.creationDate, 'yyyy-MM-dd')} + ' by ' + ${comment.user.username}">Comment date and by whom</h5>-->
+<!--            <p class="comment-body" th:text="${comment.body}">Body</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="comment-btn-container">-->
+<!--        <a th:href="@{'/comment/{id}'(id=${post.id})}">-->
+<!--            <button class="comment-btn" type="button">Comment Post</button>-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<footer th:replace="fragments/footer :: footer"></footer>-->
+
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="fragments/head :: head">
@@ -169,7 +218,8 @@
         <img class="post-image" th:src="${post.imageUrl}" alt="Post Image"/>
         <div class="post-content">
             <h2 class="post-title" th:text="${post.title}">Title</h2>
-            <p class="post-body" th:text="${post.body}">body text</p>
+            <!-- Render the post body as raw HTML -->
+            <p class="post-body" th:utext="${post.body}">body text</p>
             <div class="edit-button" sec:authorize="isAuthenticated()" th:if="${isOwner}">
                 <a th:href="@{'/editPost/{id}'(id=${post.id})}">
                     <button class="edit-btn" type="button">Edit</button>
@@ -184,8 +234,8 @@
             <p>No comments yet. Be the first to comment!</p>
         </div>
         <div class="comment" th:each="comment : ${post.comments}">
-            <h5 class="comment-info" th:text="'Commented on ' + ${#dates.format(post.creationDate, 'yyyy-MM-dd')} + ' by ' + ${comment.user.username}">Comment date and by whom</h5>
-            <p class="comment-body" th:text="${comment.body}">Body</p>
+            <h5 class="comment-info" th:text="'Commented on ' + ${#dates.format(comment.creationDate, 'yyyy-MM-dd')} + ' by ' + ${comment.user.username}">Comment date and by whom</h5>
+            <p class="comment-body" th:utext="${comment.body}">Body</p>
         </div>
     </div>
 
@@ -200,4 +250,3 @@
 
 </body>
 </html>
-
